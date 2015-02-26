@@ -4,6 +4,9 @@ public class StartProgram {
 
     public static void main(String[] args) {
         
+        Product p = new Product("Women's Socks", 12.95, "12345");
+        QtyDiscount d = new QtyDiscount(0.3, 3);
+        
     }
     
 }

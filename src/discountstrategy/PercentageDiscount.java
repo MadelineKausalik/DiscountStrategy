@@ -1,14 +1,29 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package discountstrategy;
 
-/**
- *
- * @author mkausalik3
- */
-public class PercentageDiscount {
+public class PercentageDiscount implements Discount {
+    
+    private double discountRate = 0.1;
+    private int qty;
+    
+
+    public double getDiscountRate() {
+        return discountRate;
+    }
+
+    public void setDiscountRate(double discountRate) {
+        this.discountRate = discountRate;
+    }
+
+    public int getQty() {
+        return qty;
+    }
+
+    public void setQty(int qty) {
+        this.qty = qty;
+    }
+    
+    public double getPercentDiscount(double price, int qty) {
+        return qty * price * discountRate;
+    }
     
 }
