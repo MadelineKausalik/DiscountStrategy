@@ -5,7 +5,6 @@ public class PercentageDiscount implements Discount {
     private double discountRate = 0.1;
     private int qty;
     
-
     public double getDiscountRate() {
         return discountRate;
     }
