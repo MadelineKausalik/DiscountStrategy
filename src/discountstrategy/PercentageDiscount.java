@@ -2,15 +2,11 @@ package discountstrategy;
 
 public class PercentageDiscount implements Discount {
     
-    private double discountRate = 0.1;
+    private double discountRate;
     private int qty;
     
     public double getDiscountRate() {
         return discountRate;
-    }
-
-    public void setDiscountRate(double discountRate) {
-        this.discountRate = discountRate;
     }
 
     public int getQty() {
@@ -23,6 +19,10 @@ public class PercentageDiscount implements Discount {
     
     public double getPercentDiscount(double price, int qty) {
         return qty * price * discountRate;
+    }
+
+    public PercentageDiscount(double discountRate) {
+        this.discountRate = discountRate;
     }
     
 }

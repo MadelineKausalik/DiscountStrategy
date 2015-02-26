@@ -1,6 +1,6 @@
 package discountstrategy;
 
-public class Product {
+public class Product implements Products {
     
     private String name;
     private double price;
