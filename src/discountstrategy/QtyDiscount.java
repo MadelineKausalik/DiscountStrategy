@@ -35,11 +35,11 @@ public class QtyDiscount implements Discount {
         this.minQty = minQty;
     }
     
-    public double checkDiscount(int qty, double price) {
+    public double checkMtnDewDiscount(int qty, double price) {
         if (qty >= minQty) {
             return price = 3.00;
         } else {
-            return price = price;
+            return price;
         }
     }
     
