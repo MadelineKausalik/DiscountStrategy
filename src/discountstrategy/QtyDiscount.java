@@ -6,6 +6,12 @@ public class QtyDiscount implements Discount {
     private int qty;
     private int minQty;
 
+    public QtyDiscount(int minQty) {
+        this.minQty = minQty;
+    }
+
+    
+    
     public double getDiscountRate() {
         return discountRate;
     }
@@ -29,18 +35,17 @@ public class QtyDiscount implements Discount {
     public void setMinQty(int minQty) {
         this.minQty = minQty;
     }
-    
-    public QtyDiscount(double discountRate, int minQty) {
-        this.discountRate = discountRate;
-        this.minQty = minQty;
-    }
-    
-    public double checkMtnDewDiscount(int qty, double price) {
+
+    @Override
+    public double getDiscount(double price, int qty) {
+         double totalPrice = 0;
         if (qty >= minQty) {
-            return price = 3.00;
+            totalPrice = (price * qty) - price;
         } else {
-            return price;
+           totalPrice = (price * qty);
         }
+         return totalPrice;
     }
+    
     
 }

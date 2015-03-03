@@ -1,6 +1,6 @@
 package discountstrategy;
 
-public class Product implements Products {
+public class Product {
     
     private String name;
     private double price;
@@ -36,6 +36,7 @@ public class Product implements Products {
         this.productID = productID;
     }
     
+
     
     
 }
