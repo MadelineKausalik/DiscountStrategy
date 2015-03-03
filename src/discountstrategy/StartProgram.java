@@ -20,8 +20,12 @@ public class StartProgram {
         CashRegister service = new CashRegister();
         service.setLineItems(new LineItems(products[0],3, discount[0]));
         
+        System.out.println("================================");
+        for(customers[i]) {
+            
+        }
+        System.out.println("================================");
         System.out.println(service.getLineItems().toString());
-//        
         
     }
     

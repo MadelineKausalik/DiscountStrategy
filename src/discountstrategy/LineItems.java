@@ -5,6 +5,11 @@ public class LineItems {
     private Product product;
     private int qty;
 
+    private Discount discounts[] = {
+        new QtyDiscount(3),
+        new PercentageDiscount(.5)
+    };
+    
     public Product getProduct() {
         return product;
     }
@@ -19,7 +24,6 @@ public class LineItems {
         }
         this.discount = discount;
     }
-
     
     public void setProduct(Product product) {
         this.product = product;
@@ -42,12 +46,14 @@ public class LineItems {
     @Override
     public String toString() {
         double total = 0;
-                if(getDiscount() == discount[0]){
-                    total = 
+                if(getDiscount() == discounts[0]){
+                    total = product.getPrice() * qty - product.getPrice();
                 }else{
-                    
+                    total = product.getPrice() * qty;
                 }
-        return "";
+        return "Total: " + total;
     }
+    
+    
 
 }

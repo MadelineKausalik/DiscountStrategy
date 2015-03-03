@@ -9,8 +9,6 @@ public class QtyDiscount implements Discount {
     public QtyDiscount(int minQty) {
         this.minQty = minQty;
     }
-
-    
     
     public double getDiscountRate() {
         return discountRate;
