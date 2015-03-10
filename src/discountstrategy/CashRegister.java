@@ -30,6 +30,11 @@ public class CashRegister {
         this.discount = discount;
     }
     
-    
+    // public void scanItem() {
+//         if (scannedID == product[])
+//     } 
         
+    
+           
+    
 }
